@@ -1,0 +1,39 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This API made for Jeres portfolio",
+        "version": "2.0.0",
+        "title": "Jeres API",
+        "contact": {
+            "email": "canlacelis@gmail.com",
+            "mobile": "09959003488"
+        }
+    },
+    "schemes": ["http"],
+    "basePath": "https://jeres-api-pb.herokuapp.com/",
+    "paths": {
+        "/skills": {
+            "get": {
+                "summary": "get all skills information",
+                "description": "get all skill name, skill id, and skill description. ",
+                "produces": ["application/json"],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Successful get",
+                        "schema": {
+                            "type": "array"
+                        }
+                    },
+                    "400": {
+                        "description": "Failed"
+                    }
+                }
+            },
+            "post": {
+
+            },
+            "delete": {}
+        }
+    }
+}

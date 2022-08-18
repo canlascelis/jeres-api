@@ -1,0 +1,19 @@
+GET http://localhost/skills
+Authorization: Bearer d9f6fcf557b9e50fc62ddb0c8af54149dac9337aaec56dadd227fd911ea44541d7ffed9effb9a60d6cea9ee4677726795eedf4247312200ebd0b20442173fc8e
+
+###
+
+GET http://localhost/testimonials
+Authorization: Bearer d9f6fcf557b9e50fc62ddb0c8af54149dac9337aaec56dadd227fd911ea44541d7ffed9effb9a60d6cea9ee4677726795eedf4247312200ebd0b20442173fc8e
+
+
+###
+
+POST http://localhost/skills
+Content-Type: application/json
+Authorization: Bearer d9f6fcf557b9e50fc62ddb0c8af54149dac9337aaec56dadd227fd911ea44541d7ffed9effb9a60d6cea9ee4677726795eedf4247312200ebd0b20442173fc8e
+
+{
+    "skill_name": "Test name",
+    "skill_description": "Test Desc"
+}
