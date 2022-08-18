@@ -9,6 +9,7 @@ const client = new Client({
     port: process.env.PG_PORT,
     database: process.env.PG_DATABASE,
     connectionString: process.env.DATABASE_URL || connectionString,
+    // NOTE: in development environment comment this
     ssl: {
         rejectUnauthorized: false
     }
