@@ -9,15 +9,18 @@
             "mobile": "09959003488"
         }
     },
-    "schemes": ["http"],
+    "schemes": [
+        "https"
+    ],
     "basePath": "https://jeres-api-pb.herokuapp.com/",
     "paths": {
         "/skills": {
             "get": {
                 "summary": "get all skills information",
                 "description": "get all skill name, skill id, and skill description. ",
-                "produces": ["application/json"],
-                "parameters": [],
+                "produces": [
+                    "application/json"
+                ],
                 "responses": {
                     "200": {
                         "description": "Successful get",
@@ -31,9 +34,37 @@
                 }
             },
             "post": {
-
-            },
-            "delete": {}
+                "summary": "add one skill information",
+                "description": "add skill name, skill id, and skill description. ",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful get",
+                        "schema": {
+                            "type": "array"
+                        }
+                    },
+                    "400": {
+                        "description": "Failed"
+                    }
+                }
+            }
+        },
+        "/skills/{id}": {
+            "delete": {
+                "summary": "delete one skill using id",
+                "description": "hard delete the skill. ",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully deleted"
+                    }
+                }
+            }
         }
     }
 }

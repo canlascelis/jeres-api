@@ -7,6 +7,7 @@ import { readFile } from 'fs/promises';
 import skills from './routes/skills.routes.js';
 import testimonials from './routes/testimonial.routes.js';
 import contact from './routes/contact.routes.js';
+import rating from './routes/rating.routes.js';
 
 const app = express();
 const PORT = process.env.PORT || 80;
@@ -32,6 +33,7 @@ app.use('/', express.static('public'));
 app.use(skills);
 app.use(testimonials);
 app.use(contact);
+app.use(rating);
 
 //documentation
 app.use('/documentation', swaggerUi.serve, swaggerUi.setup(swaggerJson));

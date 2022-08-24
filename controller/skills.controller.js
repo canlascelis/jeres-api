@@ -1,6 +1,5 @@
 import client from '../config/db.config.js';
 import express from 'express';
-import Jwt from 'jsonwebtoken';
 
 //middleware
 import authenticateToken from '../middleware/authToken.js';
