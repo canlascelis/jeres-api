@@ -37,4 +37,4 @@ const getRatingResults = app.get('/', authenticateToken, async (req, res) => {
     }
 })
 
-export default { saveRating };
+export default { saveRating, getRatingResults };
