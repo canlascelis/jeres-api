@@ -4,6 +4,31 @@ import authenticateToken from '../middleware/authToken.js';
 
 const app = express.Router();
 
+/* const ratingResult = async (req, res) => {
+    const { rate_count, user_name_rating } = req.body;
+
+    try {
+        await client.query('SELECT rate_count FROM rating', (error, result) => {
+            let data = result.rows;
+
+            if (!error) {
+                //res.json(data)
+                data.forEach((item, index) => {
+                    res.json(item)
+                })
+            } else {
+                console.error(error);
+                res.json(error)
+            }
+        })
+    } catch (error) {
+        console.error(error);
+        res.json(error)
+        res.status(400)
+        throw error
+    }
+}
+ */
 const saveRating = app.post('/', authenticateToken, async (req, res) => {
     const { rate_count, user_name_rating } = req.body;
 
@@ -32,8 +57,8 @@ const getRatingResults = app.get('/', authenticateToken, async (req, res) => {
                 res.status(200);
             } else {
                 res.json({ message: 'Error query' });
-                res.status(401)
-            }
+                res.status(400)
+            } 
         })
     } catch (error) {
         res.json({ message: 'Error occured while acquiring results' })
