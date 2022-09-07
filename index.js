@@ -12,7 +12,7 @@ import rating from './routes/rating.routes.js';
 const app = express();
 const PORT = process.env.PORT || 80;
 const swaggerJson = JSON.parse(await readFile(new URL('./swagger.json', import.meta.url)));
-
+const whiteList = ['http://localhost:3000/', 'https://portfolio-jerome06.herokuapp.com']
 const corsOptions = {
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
