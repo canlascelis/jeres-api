@@ -14,7 +14,6 @@ const PORT = process.env.PORT || 80;
 const swaggerJson = JSON.parse(await readFile(new URL('./swagger.json', import.meta.url)));
 
 const corsOptions = {
-    origin: 'https://portfolio-jerome06.herokuapp.com',
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
